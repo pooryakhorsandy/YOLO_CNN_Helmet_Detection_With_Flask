@@ -1,0 +1,62 @@
+<!-- HTML code for the upload form with comments -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Helmet Detection</title>
+    <style>
+        /* Set the background image */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/background.jpg'); /* Update the path to your background image */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Center the form on the page */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Set the height of the container to match the viewport */
+        }
+
+        /* Style the form */
+        .upload-form {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        /* Style the input and button */
+        input[type="file"], input[type="submit"] {
+            margin: 10px;
+            padding: 10px;
+            border: none;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Container to center the form -->
+    <div class="container">
+        <!-- Form for uploading the video -->
+        <div class="upload-form">
+            <h1>Upload Video for Helmet Detection</h1>
+            <!-- Form element with action and method -->
+            <form action="/process_video" method="POST" enctype="multipart/form-data">
+                <!-- Input field for choosing the video file -->
+                <input type="file" name="video">
+                <!-- Submit button to initiate video processing -->
+                <input type="submit" value="Process Video">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
